@@ -27,9 +27,9 @@
 						"styles": ["src/styles.css"],
 						"scripts": [],
 						"server": "src/main.server.ts",
-						"outputMode": "server",
+						"prerender": true,
 						"ssr": {
-							"entry": "src/server.ts"
+							"entry": "server.ts"
 						}
 					},
 					"configurations": {
@@ -38,17 +38,15 @@
 								{
 									"type": "initial",
 									"maximumWarning": "500kB",
-									"maximumError": "3MB"
+									"maximumError": "1MB"
 								},
 								{
 									"type": "anyComponentStyle",
-									"maximumWarning": "4kB",
-									"maximumError": "8kB"
+									"maximumWarning": "2kB",
+									"maximumError": "4kB"
 								}
 							],
-							"outputHashing": "all",
-							"optimization": false,
-							"sourceMap": true
+							"outputHashing": "all"
 						},
 						"development": {
 							"optimization": false,
@@ -90,8 +88,5 @@
 				}
 			}
 		}
-	},
-	"cli": {
-		"analytics": false
 	}
 }
